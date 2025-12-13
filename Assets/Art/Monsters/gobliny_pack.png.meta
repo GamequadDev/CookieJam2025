@@ -1,55 +1,61 @@
 fileFormatVersion: 2
-guid: d46e54781e048c74ebeed08a609a131f
+guid: ca0a521b0b72d0741abfbf9840742778
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5226995458290234750
-    second: wilkolak_pack_0
+      213: 7208164934686630100
+    second: gobliny_pack_0
   - first:
-      213: -4455209174792044632
-    second: wilkolak_pack_1
+      213: -8931237665993192068
+    second: gobliny_pack_1
   - first:
-      213: 1166807219264577693
-    second: wilkolak_pack_2
+      213: -6812125034981017557
+    second: gobliny_pack_2
   - first:
-      213: -1400322016051780083
-    second: wilkolak_pack_3
+      213: 5205809410572795345
+    second: gobliny_pack_3
   - first:
-      213: -4080288887797653787
-    second: wilkolak_pack_4
+      213: 5609324218069668506
+    second: gobliny_pack_4
   - first:
-      213: 9184841598958649861
-    second: wilkolak_pack_5
+      213: 5403404316414676768
+    second: gobliny_pack_5
   - first:
-      213: 7051768020958888329
-    second: wilkolak_pack_6
+      213: 5618194941265228528
+    second: gobliny_pack_6
   - first:
-      213: 1428235840727975230
-    second: wilkolak_pack_7
+      213: 6095695173631635476
+    second: gobliny_pack_7
   - first:
-      213: 8768564120420335781
-    second: wilkolak_pack_8
+      213: -2468307130985986746
+    second: gobliny_pack_8
   - first:
-      213: -5139145985294674369
-    second: wilkolak_pack_9
+      213: 7374295541424346151
+    second: gobliny_pack_9
   - first:
-      213: -2712156612456112010
-    second: wilkolak_pack_10
+      213: 4246660160596531086
+    second: gobliny_pack_10
   - first:
-      213: -1925264297623725148
-    second: wilkolak_pack_11
+      213: -6281320979211232675
+    second: gobliny_pack_11
   - first:
-      213: -7776602959573015426
-    second: wilkolak_pack_12
+      213: 8357613274155111622
+    second: gobliny_pack_12
   - first:
-      213: -8026088701432329177
-    second: wilkolak_pack_13
+      213: 7533155050031922395
+    second: gobliny_pack_13
   - first:
-      213: 2495983764342132376
-    second: wilkolak_pack_14
+      213: -3224821569543925826
+    second: gobliny_pack_14
   - first:
-      213: -4754520817581748920
-    second: wilkolak_pack_15
+      213: 1899860987218963816
+    second: gobliny_pack_15
+  - first:
+      213: 3450562932130833536
+    second: gobliny_pack_16
+  - first:
+      213: 574600194651552145
+    second: gobliny_pack_17
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -92,11 +98,11 @@ TextureImporter:
   lightmap: 0
   compressionQuality: 50
   spriteMode: 2
-  spriteExtrude: 0
-  spriteMeshType: 0
+  spriteExtrude: 1
+  spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -145,254 +151,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: wilkolak_pack_0
-      rect:
-        serializedVersion: 2
-        x: 8
-        y: 95
-        width: 16
-        height: 31
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e7538fdeca40a8840800000000000000
-      internalID: 5226995458290234750
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wilkolak_pack_1
-      rect:
-        serializedVersion: 2
-        x: 40
-        y: 95
-        width: 16
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8af75783cdaeb22c0800000000000000
-      internalID: -4455209174792044632
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wilkolak_pack_2
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 95
-        width: 16
-        height: 31
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d9060a1ebf4513010800000000000000
-      internalID: 1166807219264577693
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wilkolak_pack_3
-      rect:
-        serializedVersion: 2
-        x: 104
-        y: 95
-        width: 16
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d06231eab8e019ce0800000000000000
-      internalID: -1400322016051780083
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wilkolak_pack_4
-      rect:
-        serializedVersion: 2
-        x: 168
-        y: 95
-        width: 16
-        height: 31
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5eed8d5ffd6ef57c0800000000000000
-      internalID: -4080288887797653787
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wilkolak_pack_5
-      rect:
-        serializedVersion: 2
-        x: 196
-        y: 95
-        width: 24
-        height: 31
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 502492855cc177f70800000000000000
-      internalID: 9184841598958649861
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wilkolak_pack_6
-      rect:
-        serializedVersion: 2
-        x: 1
-        y: 63
-        width: 28
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 981c6b737a9ecd160800000000000000
-      internalID: 7051768020958888329
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wilkolak_pack_7
-      rect:
-        serializedVersion: 2
-        x: 33
-        y: 64
-        width: 28
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e3582161eec12d310800000000000000
-      internalID: 1428235840727975230
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wilkolak_pack_8
-      rect:
-        serializedVersion: 2
-        x: 162
-        y: 63
-        width: 28
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5a0c3e31c9230b970800000000000000
-      internalID: 8768564120420335781
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wilkolak_pack_9
-      rect:
-        serializedVersion: 2
-        x: 193
-        y: 63
-        width: 30
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f36d2a964f51ea8b0800000000000000
-      internalID: -5139145985294674369
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wilkolak_pack_10
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 63
-        width: 31
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 670a35b3eeb7c5ad0800000000000000
-      internalID: -2712156612456112010
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wilkolak_pack_11
+      name: gobliny_pack_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 31
-        width: 30
+        y: 115
+        width: 32
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -402,19 +166,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4ab556162561845e0800000000000000
-      internalID: -1925264297623725148
+      spriteID: 4d06c6e41db880460800000000000000
+      internalID: 7208164934686630100
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wilkolak_pack_12
+      name: gobliny_pack_1
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 147
+        width: 28
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7d03e999aedd0480800000000000000
+      internalID: -8931237665993192068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gobliny_pack_2
       rect:
         serializedVersion: 2
         x: 32
-        y: 31
-        width: 30
+        y: 115
+        width: 32
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -424,19 +210,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e74266b7fc4f31490800000000000000
-      internalID: -7776602959573015426
+      spriteID: b2839647f587671a0800000000000000
+      internalID: -6812125034981017557
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wilkolak_pack_13
+      name: gobliny_pack_3
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 147
+        width: 28
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ddb39dc310ce3840800000000000000
+      internalID: 5205809410572795345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gobliny_pack_4
       rect:
         serializedVersion: 2
         x: 64
-        y: 31
-        width: 30
+        y: 115
+        width: 32
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -446,19 +254,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 72c895f99da9d9090800000000000000
-      internalID: -8026088701432329177
+      spriteID: a92d90828a258dd40800000000000000
+      internalID: 5609324218069668506
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wilkolak_pack_14
+      name: gobliny_pack_5
       rect:
         serializedVersion: 2
-        x: 161
-        y: 31
-        width: 30
+        x: 66
+        y: 147
+        width: 28
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02f85b9e89fbcfa40800000000000000
+      internalID: 5403404316414676768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gobliny_pack_6
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 115
+        width: 32
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -468,19 +298,129 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 89e41c6620483a220800000000000000
-      internalID: 2495983764342132376
+      spriteID: 0f2b2095886d7fd40800000000000000
+      internalID: 5618194941265228528
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wilkolak_pack_15
+      name: gobliny_pack_7
       rect:
         serializedVersion: 2
-        x: 195
-        y: 31
+        x: 98
+        y: 147
+        width: 28
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 410706bc672489450800000000000000
+      internalID: 6095695173631635476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gobliny_pack_8
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 115
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6454405fdbfcebdd0800000000000000
+      internalID: -2468307130985986746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gobliny_pack_9
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 147
+        width: 28
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 724585769b2c65660800000000000000
+      internalID: 7374295541424346151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gobliny_pack_10
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 115
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e87d8229aea2fea30800000000000000
+      internalID: 4246660160596531086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gobliny_pack_11
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 147
         width: 26
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5ad7e969d344d8a0800000000000000
+      internalID: -6281320979211232675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gobliny_pack_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 83
+        width: 32
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -490,8 +430,118 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 84d07d6c18c840eb0800000000000000
-      internalID: -4754520817581748920
+      spriteID: 6c4da180ef43cf370800000000000000
+      internalID: 8357613274155111622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gobliny_pack_13
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 83
+        width: 30
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdcb71b0b942b8860800000000000000
+      internalID: 7533155050031922395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gobliny_pack_14
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 83
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebf015b4ed12f33d0800000000000000
+      internalID: -3224821569543925826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gobliny_pack_15
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 83
+        width: 30
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86d2fc18089ad5a10800000000000000
+      internalID: 1899860987218963816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gobliny_pack_16
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 83
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 084e9c474bcd2ef20800000000000000
+      internalID: 3450562932130833536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gobliny_pack_17
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 83
+        width: 30
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 199731a25d369f700800000000000000
+      internalID: 574600194651552145
       vertices: []
       indices: 
       edges: []
@@ -510,22 +560,24 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      wilkolak_pack_0: 5226995458290234750
-      wilkolak_pack_1: -4455209174792044632
-      wilkolak_pack_10: -2712156612456112010
-      wilkolak_pack_11: -1925264297623725148
-      wilkolak_pack_12: -7776602959573015426
-      wilkolak_pack_13: -8026088701432329177
-      wilkolak_pack_14: 2495983764342132376
-      wilkolak_pack_15: -4754520817581748920
-      wilkolak_pack_2: 1166807219264577693
-      wilkolak_pack_3: -1400322016051780083
-      wilkolak_pack_4: -4080288887797653787
-      wilkolak_pack_5: 9184841598958649861
-      wilkolak_pack_6: 7051768020958888329
-      wilkolak_pack_7: 1428235840727975230
-      wilkolak_pack_8: 8768564120420335781
-      wilkolak_pack_9: -5139145985294674369
+      gobliny_pack_0: 7208164934686630100
+      gobliny_pack_1: -8931237665993192068
+      gobliny_pack_10: 4246660160596531086
+      gobliny_pack_11: -6281320979211232675
+      gobliny_pack_12: 8357613274155111622
+      gobliny_pack_13: 7533155050031922395
+      gobliny_pack_14: -3224821569543925826
+      gobliny_pack_15: 1899860987218963816
+      gobliny_pack_16: 3450562932130833536
+      gobliny_pack_17: 574600194651552145
+      gobliny_pack_2: -6812125034981017557
+      gobliny_pack_3: 5205809410572795345
+      gobliny_pack_4: 5609324218069668506
+      gobliny_pack_5: 5403404316414676768
+      gobliny_pack_6: 5618194941265228528
+      gobliny_pack_7: 6095695173631635476
+      gobliny_pack_8: -2468307130985986746
+      gobliny_pack_9: 7374295541424346151
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
