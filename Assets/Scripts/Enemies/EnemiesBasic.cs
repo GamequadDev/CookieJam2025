@@ -4,6 +4,12 @@ using System.Collections;
 [RequireComponent(typeof(SpriteRenderer))]
 public class EnemiesBasic : MonoBehaviour
 {
+    public enum EnemyType
+    {
+        Melee,
+        Ranged
+    }
+
     [Header("Movement Settings")]
     [SerializeField] private float speed = 5f;
     [SerializeField] private float direction = 1f;
@@ -13,16 +19,35 @@ public class EnemiesBasic : MonoBehaviour
 
     private SpriteRenderer spriteRenderer;
     private bool isStopped = false;
-    
+
+
+    [Header("Enemy Type")]
+    [SerializeField] private EnemyType enemyType = EnemyType.Melee; 
+    [SerializeField] private float RangeDistanceFromWall = 5f;
+
+    private BaseWall target;
+
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        target = FindFirstObjectByType<BaseWall>();
     }
 
     void Update()
     {
         if (!isStopped)
         {
+            if (enemyType == EnemyType.Ranged)
+            {
+                Vector2 position = target.transform.position;
+                Debug.Log(Mathf.Abs(transform.position.y - target.transform.position.y));
+                if (Mathf.Abs(transform.position.y - target.transform.position.y) < RangeDistanceFromWall)
+                {
+                    isStopped = true;
+                    speed = 0;
+                }
+            }
+
             transform.Translate(Vector3.down * speed * direction * Time.deltaTime);
         }
     }
