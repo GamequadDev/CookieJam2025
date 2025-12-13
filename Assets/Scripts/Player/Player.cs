@@ -5,11 +5,13 @@ using System.Collections;
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(Animator))]
 [RequireComponent(typeof(SpriteRenderer))]
+[RequireComponent(typeof(ParticleSystem))]
 public class Player : MonoBehaviour
 {
     private Rigidbody2D rb;
     private Animator animator;
     private SpriteRenderer spriteRenderer;
+    private ParticleSystem movementParticles;
 
     [Header("Movement Settings")]
     [SerializeField] private float maxSpeed = 5f;
@@ -17,13 +19,14 @@ public class Player : MonoBehaviour
     [SerializeField] private float decelerationTime = 0.05f; // Quick stop
 
     private Vector2 moveInput;
-    private Vector2 currentVelocityRef; // Required for SmoothDamp
+    private Vector2 currentVelocityRef;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        movementParticles = GetComponent<ParticleSystem>();
 
         // Ensure physics settings are correct for top-down collision
         rb.bodyType = RigidbodyType2D.Dynamic;
@@ -40,21 +43,39 @@ public class Player : MonoBehaviour
         Vector2 input = new Vector2(moveHorizontal, moveVertical);
         moveInput = input.normalized;
 
-        animator.SetFloat("MoveX", moveHorizontal);
-        animator.SetFloat("MoveY", moveVertical);
+        //animator.SetFloat("MoveX", moveHorizontal);
+        //animator.SetFloat("MoveY", moveVertical);
+
+        HandleParticles();
+    }
+
+    private void HandleParticles()
+    {
+        if (movementParticles != null)
+        {
+            // Check if there is movement input
+            if (rb.linearVelocity.sqrMagnitude > 0.2f)
+            {
+                if (!movementParticles.isPlaying) movementParticles.Play();
+            }
+            else
+            {
+                if (movementParticles.isPlaying) movementParticles.Stop();
+            }
+        }
     }
 
     void FixedUpdate()
     {
         Vector2 targetVelocity = moveInput * maxSpeed;
-        
+
         // Choose smoothing time based on whether we are accelerating (input present) or stopping
         float smoothTime = (moveInput.sqrMagnitude > 0.001f) ? accelerationTime : decelerationTime;
 
         rb.linearVelocity = Vector2.SmoothDamp(
-            rb.linearVelocity, 
-            targetVelocity, 
-            ref currentVelocityRef, 
+            rb.linearVelocity,
+            targetVelocity,
+            ref currentVelocityRef,
             smoothTime
         );
     }
