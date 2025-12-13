@@ -27,7 +27,7 @@ public class MissileLauncher : MonoBehaviour
 
     void LaunchMissile()
     {
-        Debug.Log("Player Missile Launched!");
+       // Debug.Log("Player Missile Launched!");
        
         Instantiate(missilePrefab, launchPoint.position, launchPoint.rotation);
     }
