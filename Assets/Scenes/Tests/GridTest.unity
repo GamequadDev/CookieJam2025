@@ -21578,14 +21578,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerCharacter
       objectReference: {fileID: 0}
-    - target: {fileID: 5775071220282324653, guid: 553b8ac94e73f444583e925d1e18f554, type: 3}
-      propertyPath: accelerationTime
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5775071220282324653, guid: 553b8ac94e73f444583e925d1e18f554, type: 3}
-      propertyPath: decelerationTime
-      value: 0.3
-      objectReference: {fileID: 0}
     - target: {fileID: 7984637541418254977, guid: 553b8ac94e73f444583e925d1e18f554, type: 3}
       propertyPath: m_LocalPosition.x
       value: -9.08
