@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: 47b90f0eabd66b949b290670bac601fc
+guid: 3cea073d35057ee49a8a1959a83856e0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7125387896546800711
-    second: berserk_sprite_0
+      213: -406390166422045454
+    second: gracz_sprite_0
   - first:
-      213: -6190107795432660967
-    second: berserk_sprite_1
+      213: -387025068971887066
+    second: gracz_sprite_1
   - first:
-      213: -4623431487155560665
-    second: berserk_sprite_2
+      213: 3782179017197564807
+    second: gracz_sprite_2
   - first:
-      213: -1520424960647558686
-    second: berserk_sprite_3
+      213: 5836368073547214713
+    second: gracz_sprite_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -109,12 +109,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: berserk_sprite_0
+      name: gracz_sprite_0
       rect:
         serializedVersion: 2
-        x: 7
+        x: 6
         y: 0
-        width: 18
+        width: 20
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -124,19 +124,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9bbc573c5798d1d90800000000000000
-      internalID: -7125387896546800711
+      spriteID: 2fcb33afb463c5af0800000000000000
+      internalID: -406390166422045454
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: berserk_sprite_1
+      name: gracz_sprite_1
       rect:
         serializedVersion: 2
-        x: 33
+        x: 38
         y: 0
-        width: 27
+        width: 20
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -146,19 +146,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9102cd3b1c1581aa0800000000000000
-      internalID: -6190107795432660967
+      spriteID: 62672c410c201aaf0800000000000000
+      internalID: -387025068971887066
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: berserk_sprite_2
+      name: gracz_sprite_2
       rect:
         serializedVersion: 2
-        x: 71
+        x: 70
         y: 0
-        width: 18
+        width: 20
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -168,19 +168,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 72f9cb4fe8546dfb0800000000000000
-      internalID: -4623431487155560665
+      spriteID: 7833ffcf6cffc7430800000000000000
+      internalID: 3782179017197564807
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: berserk_sprite_3
+      name: gracz_sprite_3
       rect:
         serializedVersion: 2
-        x: 98
+        x: 102
         y: 0
-        width: 30
+        width: 20
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -190,8 +190,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2e907f8cd8d56eae0800000000000000
-      internalID: -1520424960647558686
+      spriteID: 97f663a27d1fef050800000000000000
+      internalID: 5836368073547214713
       vertices: []
       indices: 
       edges: []
@@ -210,10 +210,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      berserk_sprite_0: -7125387896546800711
-      berserk_sprite_1: -6190107795432660967
-      berserk_sprite_2: -4623431487155560665
-      berserk_sprite_3: -1520424960647558686
+      gracz_sprite_0: -406390166422045454
+      gracz_sprite_1: -387025068971887066
+      gracz_sprite_2: 3782179017197564807
+      gracz_sprite_3: 5836368073547214713
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
