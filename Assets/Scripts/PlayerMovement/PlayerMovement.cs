@@ -79,52 +79,76 @@ public class PlayerMovement : MonoBehaviour
     */
 
     // Wersja ruchu gracza z płynnym poruszaniem się
-    public float moveSpeed = 5f; // Speed of player movement
-    public Transform playerTransform;
+    /* public float moveSpeed = 5f; // Speed of player movement
+     public CharacterController controller;
+     public enum Direction
+     {
+         Left,
+         Right,
+         None
+     }
+     public Direction currentDirection = Direction.None;
 
-    public enum Direction
-    {
-        Left,
-        Right,
-        None
-    }
-    public Direction currentDirection = Direction.None;
+     void Start()
+     { }
+
+     private void Update()
+     {
+         HandleInput();
+         Move();
+     }
+
+     void HandleInput()
+     {
+         currentDirection = Direction.None;
+         // A -> move left, D -> move right. Using GetKey allows holding the key.
+         if (Input.GetKey(KeyCode.A))
+         {
+             currentDirection = Direction.Left;
+         }
+         else if (Input.GetKey(KeyCode.D))
+         {
+             currentDirection = Direction.Right;
+         }
+     }
+
+     void Move()
+     {
+
+
+         if (currentDirection == Direction.Left )
+         {
+             controller.Move(Vector3.left * moveSpeed * Time.deltaTime);
+
+         }
+         else if (currentDirection == Direction.Right)
+         {
+             controller.Move(Vector3.right * moveSpeed * Time.deltaTime);
+         }
+     }
+    */
+
+    public float moveSpeed = 5f; // Speed of player movement
+    bool _canGoLeft = true;
+    bool _canGoRight = true;
 
     void Start()
     { }
 
     private void Update()
     {
-        HandleInput();
-        Move();
-    }
+        bool isPressingA = Input.GetKey(KeyCode.A);
+        bool isPressingD = Input.GetKey(KeyCode.D);
 
-    void HandleInput()
-    {
-        currentDirection = Direction.None;
-        // A -> move left, D -> move right. Using GetKey allows holding the key.
-        if (Input.GetKey(KeyCode.A))
+        if (isPressingA && _canGoLeft)
         {
-            currentDirection = Direction.Left;
+            transform.Translate(Vector3.left * moveSpeed * Time.deltaTime);
         }
-        else if (Input.GetKey(KeyCode.D))
+        if (isPressingD && _canGoRight)
         {
-            currentDirection = Direction.Right;
+            transform.Translate(Vector3.right * moveSpeed * Time.deltaTime);
+
         }
     }
 
-    void Move()
-    {
-        //Todo: Add boundaries to prevent moving out of the playable area
-
-        if (currentDirection == Direction.Left)
-        {
-            playerTransform.position += Vector3.left * moveSpeed * Time.deltaTime;
-
-        }
-        else if (currentDirection == Direction.Right)
-        {
-            playerTransform.position += Vector3.right * moveSpeed * Time.deltaTime;
-        }
-    }
 }
