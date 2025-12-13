@@ -154,6 +154,7 @@ GameObject:
   - component: {fileID: 3075416049455397854}
   - component: {fileID: 8158094202982238436}
   - component: {fileID: 3799690727257166118}
+  - component: {fileID: 4255139680476197893}
   m_Layer: 0
   m_Name: BasicEnemies
   m_TagString: Untagged
@@ -248,6 +249,7 @@ MonoBehaviour:
   speed: 5
   direction: 1
   damage: 10
+  damageInterval: 1
 --- !u!70 &8158094202982238436
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -312,3 +314,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &4255139680476197893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3995974884898630968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49f21e032a5a29c4494f10dc6cb0de40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 1
+  maxHealth: 10
+  health: 10
+  attackPower: 7
+  defense: 2
+  attackTick: 0.5
+  currentTick: 0

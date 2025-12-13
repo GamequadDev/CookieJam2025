@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 1250073189131023822}
   - component: {fileID: 1423477420422115910}
   - component: {fileID: 7476654935204071971}
+  - component: {fileID: -4607026802415827733}
   m_Layer: 0
   m_Name: PlayerCharacter
   m_TagString: Untagged
@@ -4994,3 +4995,18 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!114 &-4607026802415827733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1547429003436023374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a3bcca89c37eef498aec75396f911b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tickRate: 1
+  missilePrefab: {fileID: 0}
+  launchPoint: {fileID: 0}
