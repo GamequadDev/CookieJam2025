@@ -19,10 +19,10 @@ public class Arrow : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Arrow hit: " + other.gameObject.name);
         Entity entity = other.GetComponent<Entity>();
         if (entity != null)
         {
+            Debug.Log("Arrow hit: " + other.gameObject.name);
             entity.TakeDamage(damage, shooterType);
         }
     }

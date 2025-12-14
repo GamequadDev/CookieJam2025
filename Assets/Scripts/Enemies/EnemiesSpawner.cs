@@ -8,7 +8,6 @@ public class EnemiesSpawner : MonoBehaviour
     [Header("Spawner Settings")]
     public GameObject enemyPrefab;
 
-    private float timer = 0f;
 
     [Header("Ustawienia Czasu")]
     [SerializeField] private float minSpawnTime = 1f; 
