@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using System.Collections.Generic;
 
 public class GameManger : MonoBehaviour
 {
@@ -7,14 +8,15 @@ public class GameManger : MonoBehaviour
     [SerializeField] private Camera mainCamera;
     [SerializeField] private GameObject prefabToSpawn;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    [SerializeField] private int coinCount = 0;
+
+
     void Start()
     {
         if (mainCamera == null)
             mainCamera = Camera.main;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.R))
@@ -46,5 +48,35 @@ public class GameManger : MonoBehaviour
         mouseWorldPos.z = 0; 
 
         return gameTilemap.WorldToCell(mouseWorldPos);
+    }
+
+    public void AddCoins(int amount)
+    {
+        coinCount += amount;
+    }
+
+    public int GetCoins()
+    {
+        return coinCount;
+    }
+
+    public bool RemoveCoins(int amount)
+    {
+        if (coinCount < amount)
+        {
+            return false;
+        }
+        coinCount -= amount;
+        return true;
+    }
+
+    // Inventory System
+    public List<CardData> deck = new List<CardData>();
+
+    public void AddCard(CardData card)
+    {
+        if (card == null) return;
+        deck.Add(card);
+        Debug.Log($"Added card: {card.cardName} to GameManager inventory.");
     }
 }
