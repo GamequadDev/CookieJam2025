@@ -9,7 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 416ba0918402e576580db3bd59ba9a31, type: 3}
-  m_Name: SpawnFriendlyNPCOnTileWIzard
+  m_Script: {fileID: 11500000, guid: d1240188f883602819a13ddacd0f0e6e, type: 3}
+  m_Name: UpgradeDmg
   m_EditorClassIdentifier: 
-  friendlyNPCPrefab: {fileID: 8463543977782402610, guid: a1ac033220753e94db9063ef8dca0b90, type: 3}
+  attackUpgradeAmount: 2
+  defenseUpgradeAmount: 0
+  healthAmmount: 0
+  maxHealthUpgradeAmount: 0

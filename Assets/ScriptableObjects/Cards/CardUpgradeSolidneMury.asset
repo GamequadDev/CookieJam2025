@@ -16,4 +16,4 @@ MonoBehaviour:
   cardImage: {fileID: 6020648721657516716, guid: cce918108d9adc546b56467e555adf12, type: 3}
   cardCost: 15
   cardDescription: "Leczy tw\xF3j zamek o 50"
-  cardEffects: {fileID: 0}
+  cardEffects: {fileID: 11400000, guid: df417e7dda5b48d448d13b737affbe47, type: 2}
