@@ -6,6 +6,7 @@ TagManager:
   tags:
   - LeftBorder
   - RightBorder
+  - MapLimit
   layers:
   - Default
   - TransparentFX
