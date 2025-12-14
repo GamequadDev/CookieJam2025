@@ -16,7 +16,7 @@ public class StoreManager : MonoBehaviour
     void Start()
     {
         gameManager = FindFirstObjectByType<GameManger>();
-        gameManager = FindFirstObjectByType<GameManger>();
+
 
         if (cardsInStore == null)
             cardsInStore = new List<CardData>();
@@ -40,6 +40,40 @@ public class StoreManager : MonoBehaviour
         }
         
         OnShopUpdated?.Invoke();
+    }
+
+    private float regenerationTimer = 0f;
+    private const float REGENERATION_INTERVAL = 5f;
+
+    void Update()
+    {
+        regenerationTimer += Time.deltaTime;
+        if (regenerationTimer >= REGENERATION_INTERVAL)
+        {
+            regenerationTimer = 0f;
+            ReplenishEmptySlots();
+        }
+    }
+
+    private void ReplenishEmptySlots()
+    {
+        bool updated = false;
+        for (int i = 0; i < cardsInStore.Count; i++)
+        {
+            if (cardsInStore[i] == null)
+            {
+                if (cards != null && cards.Count > 0)
+                {
+                    cardsInStore[i] = cards[Random.Range(0, cards.Count)];
+                    updated = true;
+                }
+            }
+        }
+
+        if (updated)
+        {
+            OnShopUpdated?.Invoke();
+        }
     }
 
     public void BuyCard(int index)

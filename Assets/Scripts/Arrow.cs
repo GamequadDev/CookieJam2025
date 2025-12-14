@@ -19,11 +19,20 @@ public class Arrow : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        if(other.CompareTag("MapLimit"))
+        {
+            Destroy(gameObject);
+        }
+
         Entity entity = other.GetComponent<Entity>();
         if (entity != null)
         {
             Debug.Log("Arrow hit: " + other.gameObject.name);
             entity.TakeDamage(damage, shooterType);
+            if(entity.type == Entity.EntityType.EnemyNPC || entity.type == Entity.EntityType.FriendlyNPC)
+            {
+                Destroy(gameObject);
+            }
         }
     }
 }

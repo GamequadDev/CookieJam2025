@@ -1,7 +1,10 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Entity : MonoBehaviour
 {
+    public Slider hpBar;
+
     public enum EntityType
     {
         Player,
@@ -20,7 +23,7 @@ public class Entity : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -31,6 +34,11 @@ public class Entity : MonoBehaviour
             Die();
         }
         currentTick += Time.deltaTime;
+
+        if (hpBar != null)
+        {
+            hpBar.value = (float)health / maxHealth;
+        }
     }
 
     public void TakeDamage(int damage, EntityType attackerType)
@@ -65,6 +73,8 @@ public class Entity : MonoBehaviour
         }
     }
 
+    public int goldReward = 1;
+
     void Die()
     {
         if (type == EntityType.Player)
@@ -74,6 +84,15 @@ public class Entity : MonoBehaviour
         }
         else
         {
+            if (type == EntityType.EnemyNPC)
+            {
+                GameManger gm = FindFirstObjectByType<GameManger>();
+                if (gm != null)
+                {
+                    gm.AddCoins(goldReward);
+                    Debug.Log($"Enemy died, awarded {goldReward} coins.");
+                }
+            }
             Destroy(gameObject);
         }
     }
