@@ -16,4 +16,4 @@ MonoBehaviour:
   cardImage: {fileID: 8953339881484547340, guid: cce918108d9adc546b56467e555adf12, type: 3}
   cardCost: 5
   cardDescription: Balista wystrzela pociski co 2 sekundy
-  cardEffects: {fileID: 0}
+  cardEffects: {fileID: 11400000, guid: 0a4eca0db4ac63d86a22f52bbdd7761f, type: 2}

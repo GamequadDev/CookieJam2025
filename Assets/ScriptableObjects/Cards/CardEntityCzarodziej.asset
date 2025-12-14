@@ -16,4 +16,4 @@ MonoBehaviour:
   cardImage: {fileID: 1589773817985373244, guid: cce918108d9adc546b56467e555adf12, type: 3}
   cardCost: 10
   cardDescription: Pijany czerodziej strzela w losowym kierunku morderczymi pociskami
-  cardEffects: {fileID: 0}
+  cardEffects: {fileID: 11400000, guid: e12d3f11117cd1398beeb12bd72ae0b5, type: 2}

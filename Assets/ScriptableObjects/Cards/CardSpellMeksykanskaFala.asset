@@ -16,4 +16,4 @@ MonoBehaviour:
   cardImage: {fileID: 7836649868880656999, guid: cce918108d9adc546b56467e555adf12, type: 3}
   cardCost: 15
   cardDescription: "Zadajesz obra\u017Cenia wrogom w danej kolumnie"
-  cardEffects: {fileID: 0}
+  cardEffects: {fileID: 11400000, guid: 4e10dbaf4f8502b5099e25846342510c, type: 2}

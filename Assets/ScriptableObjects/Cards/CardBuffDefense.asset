@@ -16,4 +16,4 @@ MonoBehaviour:
   cardImage: {fileID: 6263341784011897729, guid: cce918108d9adc546b56467e555adf12, type: 3}
   cardCost: 8
   cardDescription: "Zwi\u0119kszasz obron\u0119 swoich jednostek o 1"
-  cardEffects: {fileID: 0}
+  cardEffects: {fileID: 11400000, guid: 9719cafc9bf6f40a2a2033d5447a7a3b, type: 2}
