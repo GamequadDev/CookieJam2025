@@ -30,4 +30,14 @@ public class BaseWall : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    public void Heal(float amount)
+    {
+        currentHealth += amount;
+        if (currentHealth > baseHealth)
+        {
+            currentHealth = baseHealth;
+        }
+        Debug.Log($"BaseWall healed by {amount}. Current Health: {currentHealth}");
+    }
 }
