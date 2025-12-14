@@ -11,7 +11,7 @@ public class MissileLauncher : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -29,6 +29,9 @@ public class MissileLauncher : MonoBehaviour
     {
        // Debug.Log("Player Missile Launched!");
        
-        Instantiate(missilePrefab, launchPoint.position, launchPoint.rotation);
+        if (missilePrefab != null && launchPoint != null)
+        {
+            Instantiate(missilePrefab, launchPoint.position, launchPoint.rotation);
+        }
     }
 }
