@@ -16,4 +16,4 @@ MonoBehaviour:
   cardImage: {fileID: -2103985544509294407, guid: cce918108d9adc546b56467e555adf12, type: 3}
   cardCost: 15
   cardDescription: Leczy wszystkie jednostki o 10
-  cardEffects: {fileID: 0}
+  cardEffects: {fileID: 11400000, guid: df417e7dda5b48d448d13b737affbe47, type: 2}

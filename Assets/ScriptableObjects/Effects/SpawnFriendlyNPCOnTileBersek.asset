@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 416ba0918402e576580db3bd59ba9a31, type: 3}
   m_Name: SpawnFriendlyNPCOnTileBersek
   m_EditorClassIdentifier: 
-  friendlyNPCPrefab: {fileID: 2567201460133294035, guid: 6cca32a6f4458b94a986ed6b52dafacd, type: 3}
+  friendlyNPCPrefab: {fileID: 2962281000079116652, guid: f952f01928bf0d04dac5028e2a4abd36, type: 3}

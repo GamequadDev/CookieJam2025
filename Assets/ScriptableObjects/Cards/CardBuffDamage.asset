@@ -16,4 +16,4 @@ MonoBehaviour:
   cardImage: {fileID: -2434395495271307187, guid: cce918108d9adc546b56467e555adf12, type: 3}
   cardCost: 5
   cardDescription: "Zwi\u0119kszasz obra\u017Cenia swoich jednostek o 1"
-  cardEffects: {fileID: 0}
+  cardEffects: {fileID: 11400000, guid: 126ccccf764d205498818729c841a2fd, type: 2}
