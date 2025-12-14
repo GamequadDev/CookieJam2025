@@ -17,4 +17,4 @@ MonoBehaviour:
   cardCost: 8
   cardDescription: "Bersersek kr\u0119ci si\u0119 w k\xF3\u0142ko zadaj\u0105c pot\u0119\u017Cne
     obra\u017Cenia oponentom na swojej drodze"
-  cardEffects: {fileID: 0}
+  cardEffects: {fileID: 11400000, guid: 6a4310e7e83e08fabafbd5fae4eb6c69, type: 2}

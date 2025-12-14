@@ -16,4 +16,4 @@ MonoBehaviour:
   cardImage: {fileID: -1157602833882825859, guid: cce918108d9adc546b56467e555adf12, type: 3}
   cardCost: 10
   cardDescription: "Otrzymujesz 3x z\u0142ota przez 10 sekund"
-  cardEffects: {fileID: 0}
+  cardEffects: {fileID: 11400000, guid: eaf5bd76a93e3bcfeb305bdd05683d62, type: 2}
