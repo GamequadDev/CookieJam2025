@@ -16,7 +16,7 @@ public class StoreManager : MonoBehaviour
     void Start()
     {
         gameManager = FindFirstObjectByType<GameManger>();
-        gameManager = FindFirstObjectByType<GameManger>();
+
 
         if (cardsInStore == null)
             cardsInStore = new List<CardData>();

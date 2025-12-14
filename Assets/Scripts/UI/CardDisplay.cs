@@ -56,10 +56,11 @@ public class CardDisplay : MonoBehaviour
         }
     }
 
-    void OnBuyClicked()
+    public void OnBuyClicked()
     {
         if (storeManager != null)
         {
+            Debug.Log("Buying card: " + cardIndex);
             storeManager.BuyCard(cardIndex);
             // The StoreManager will invoke OnShopUpdated, triggering the StoreUI to refresh this display
         }
