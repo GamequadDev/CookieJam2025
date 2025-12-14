@@ -6,31 +6,80 @@ public class StoreManager : MonoBehaviour
     public int numberOfUniqueCards = 18;
     public int maximumCardsInStore = 5;
     
-    public List<CardData> cards;
-    public List<CardData> cardsInStore;
+    public List<CardData> cards; // Pool of all available cards
+    public List<CardData> cardsInStore; // Current cards for sale
+    
+    public System.Action OnShopUpdated;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    private GameManger gameManager;
+
     void Start()
     {
-       // cards = new List<CardData>(numberOfUniqueCards);
+        gameManager = FindFirstObjectByType<GameManger>();
+        gameManager = FindFirstObjectByType<GameManger>();
+
+        if (cardsInStore == null)
+            cardsInStore = new List<CardData>();
+
+        RefreshShop();
     }
 
-    /*
-    CardData DrawCard()
+    public void RefreshShop()
     {
-        return cards[Random.Range(0, numberOfUniqueCards)];
-    }*/
+        cardsInStore.Clear();
+        if (cards == null || cards.Count == 0)
+        {
+            Debug.LogWarning("StoreManager: No cards in the pool to generate shop.");
+            return;
+        }
 
-    // Update is called once per frame
-    void Update()
-    {
-        /*
         for (var i = 0; i < maximumCardsInStore; i++)
         {
-            if(cards[i] == null)
-            {
-                cards[i] = DrawCard();
-            }
-        }*/
+            CardData randomCard = cards[Random.Range(0, cards.Count)];
+            cardsInStore.Add(randomCard);
+        }
+        
+        OnShopUpdated?.Invoke();
+    }
+
+    public void BuyCard(int index)
+    {
+        if (index < 0 || index >= cardsInStore.Count)
+        {
+            Debug.LogError("StoreManager: Invalid card index.");
+            return;
+        }
+
+        CardData cardToBuy = cardsInStore[index];
+        if (cardToBuy == null)
+        {
+            Debug.Log("StoreManager: Slot is empty.");
+            return;
+        }
+
+        if (gameManager == null)
+        {
+            Debug.LogError("StoreManager: Missing dependencies (GameManager or Player).");
+            return;
+        }
+
+        if (gameManager.GetCoins() >= cardToBuy.cardCost)
+        {
+            // Transaction
+            gameManager.RemoveCoins(cardToBuy.cardCost);
+            gameManager.AddCard(cardToBuy);
+            
+            Debug.Log($"Purchased {cardToBuy.cardName} for {cardToBuy.cardCost}.");
+
+            // Remove from store (mark as sold/null or remove from list)
+            // Strategy: Set to null to keep index positions stable if using UI buttons
+            cardsInStore[index] = null;
+            
+            OnShopUpdated?.Invoke();
+        }
+        else
+        {
+            Debug.Log("Not enough coins!");
+        }
     }
 }
