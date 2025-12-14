@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 275995b5348e014138d682c8eda4349e, type: 3}
   m_Name: CardEntityCzarodziej
   m_EditorClassIdentifier: 
-  cardName: Czarodziej
+  cardName: Pijany Czarodziej
   cardImage: {fileID: 1589773817985373244, guid: cce918108d9adc546b56467e555adf12, type: 3}
   cardCost: 10
   cardDescription: Pijany czerodziej strzela w losowym kierunku morderczymi pociskami

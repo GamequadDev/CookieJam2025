@@ -1,7 +1,10 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Entity : MonoBehaviour
 {
+    public Slider hpBar;
+
     public enum EntityType
     {
         Player,
@@ -20,7 +23,7 @@ public class Entity : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -31,6 +34,8 @@ public class Entity : MonoBehaviour
             Die();
         }
         currentTick += Time.deltaTime;
+
+        hpBar.value = (float)(health / maxHealth);
     }
 
     public void TakeDamage(int damage, EntityType attackerType)

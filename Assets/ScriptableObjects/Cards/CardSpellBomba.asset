@@ -17,4 +17,4 @@ MonoBehaviour:
   cardCost: 6
   cardDescription: "Zrzucasz bombe w dane miejsce zadaj\u0105c obra\u017Cenia pobliskim
     wrogom"
-  cardEffects: {fileID: 0}
+  cardEffects: {fileID: 11400000, guid: 255cff43c98fc4139b78b770c6c3b6af, type: 2}
