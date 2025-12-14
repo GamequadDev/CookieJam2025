@@ -8,6 +8,9 @@ public class GameManger : MonoBehaviour
     [SerializeField] private Camera mainCamera;
     [SerializeField] private GameObject prefabToSpawn;
 
+    [SerializeField] private GameObject cursorHighlightPrefab;
+    private GameObject currentCursorInstance;
+
     [SerializeField] private int coinCount = 0;
 
 
@@ -16,6 +19,8 @@ public class GameManger : MonoBehaviour
         if (mainCamera == null)
             mainCamera = Camera.main;
     }
+
+    private System.Action<Vector3Int> onTileSelected;
 
     void Update()
     {
@@ -34,6 +39,54 @@ public class GameManger : MonoBehaviour
                 if (prefabToSpawn == null) Debug.LogWarning("PrefabToSpawn is not assigned!");
             }
         }
+
+        if (onTileSelected != null)
+        {
+            // Update cursor position
+            if (currentCursorInstance != null)
+            {
+                Vector3Int mouseTilePos = GetMouseTilePosition();
+                Vector3 worldPos = GetTileCenterWorld(mouseTilePos);
+                currentCursorInstance.transform.position = worldPos;
+            }
+
+            if (Input.GetMouseButtonDown(0))
+            {
+                Vector3Int tilePos = GetMouseTilePosition();
+                onTileSelected.Invoke(tilePos);
+                onTileSelected = null; // Reset after selection
+
+                // Cleanup visual
+                if (currentCursorInstance != null)
+                {
+                    Destroy(currentCursorInstance);
+                    currentCursorInstance = null;
+                }
+            }
+        }
+    }
+
+    public void StartTileSelection(System.Action<Vector3Int> callback)
+    {
+        onTileSelected = callback;
+        Debug.Log("Select a tile...");
+
+        if (cursorHighlightPrefab != null)
+        {
+            if (currentCursorInstance != null) Destroy(currentCursorInstance);
+            Vector3Int tilePos = GetMouseTilePosition();
+            Vector3 worldPos = GetTileCenterWorld(tilePos);
+            currentCursorInstance = Instantiate(cursorHighlightPrefab, worldPos, Quaternion.identity);
+        }
+    }
+
+    public Vector3 GetTileCenterWorld(Vector3Int tilePos)
+    {
+         if (gameTilemap != null)
+         {
+             return gameTilemap.GetCellCenterWorld(tilePos);
+         }
+         return Vector3.zero;
     }
 
     public Vector3Int GetMouseTilePosition()
@@ -78,5 +131,10 @@ public class GameManger : MonoBehaviour
         if (card == null) return;
         deck.Add(card);
         Debug.Log($"Added card: {card.cardName} to GameManager inventory.");
+
+        if (card.cardEffects != null)
+        {
+            card.cardEffects.ApplyEffect();
+        }
     }
 }
