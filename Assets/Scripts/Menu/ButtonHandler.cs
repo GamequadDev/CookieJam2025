@@ -29,7 +29,7 @@ public class ButtonHandler : MonoBehaviour
 
     public void StartGame()
     {
-        SceneManager.LoadScene("Game");   
+        SceneManager.LoadScene("MainGameplayScene");   
     }
 
     public void QuitGame()
