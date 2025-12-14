@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class Entity : MonoBehaviour
 {
-    public Slider hpBar;
+   // public Slider hpBar;
 
     public enum EntityType
     {
@@ -22,16 +22,15 @@ public class Entity : MonoBehaviour
     public float currentTick = 0f;
     public Collider2D collider2d;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         if(collider2d == null)
         {
             collider2d = GetComponent<Collider2D>();
         }
+        goldReward = 2;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if(health <= 0)
@@ -40,25 +39,16 @@ public class Entity : MonoBehaviour
         }
         currentTick += Time.deltaTime;
 
-        if (currentTick > attackTick)
+       /* if (currentTick > attackTick)
         {
-            // Reset trigger contacts by briefly disabling and enabling the collider
-            if (collider2d != null)
-            {
-                collider2d.enabled = false;
-                collider2d.enabled = true;
-            }
-        }
-
-        if (hpBar != null)
-        {
-            hpBar.value = (float)health / maxHealth;
-        }
+            collider2d.enabled = false;
+            collider2d.enabled = true;
+        }*/
     }
 
     public void TakeDamage(int damage, EntityType attackerType)
     {
-        if (attackerType == EntityType.EnemyNPC && type == EntityType.FriendlyNPC || type == EntityType.Player)
+        if (attackerType == EntityType.EnemyNPC && (type == EntityType.FriendlyNPC || type == EntityType.Player))
         {
             int damageTaken = damage - defense;
             if (damageTaken < 0)
@@ -68,7 +58,7 @@ public class Entity : MonoBehaviour
             health -= damageTaken;
         }
 
-        if (type == EntityType.EnemyNPC && attackerType == EntityType.FriendlyNPC || attackerType == EntityType.Player)
+        if (type == EntityType.EnemyNPC && (attackerType == EntityType.FriendlyNPC || attackerType == EntityType.Player))
         {
             int damageTaken = damage - defense;
             if (damageTaken < 0)
@@ -88,7 +78,7 @@ public class Entity : MonoBehaviour
         }
     }
 
-    public int goldReward = 1;
+    public int goldReward = 2;
 
     void Die()
     {
@@ -112,19 +102,49 @@ public class Entity : MonoBehaviour
         }
     }
 
-    
-
-    private void OnTriggerEnter2D(Collider2D other)
+   /* private void OnTriggerEnter2D(Collider2D other)
     {
-        if (currentTick > attackTick)
+        if (currentTick >= attackTick)
         {
-            // start cooldown
             currentTick = 0f;
             Debug.Log("Entity hit: " + other.gameObject.name);
             Entity entity = other.GetComponent<Entity>();
             if (entity != null)
             {
                 entity.TakeDamage(attackPower, type);
+            }
+            
+            // Reset collider immediately after attack to allow next trigger detection
+            if (collider2d != null)
+            {
+                collider2d.enabled = false;
+                collider2d.enabled = true;
+            }
+        }
+    } */
+
+    private void OnTriggerStay2D(Collider2D other)
+    {  
+        if (currentTick >= attackTick)
+        {
+            
+            Debug.Log("Entity hit: " + other.gameObject.name);
+            Entity entity = other.GetComponent<Entity>();
+            if (entity != null)
+            {
+                if (type == EntityType.EnemyNPC && (entity.type == EntityType.FriendlyNPC || entity.type == EntityType.Player))
+                    currentTick = 0f;
+                else if (entity.type == EntityType.EnemyNPC && (type == EntityType.FriendlyNPC || type == EntityType.Player))
+                    currentTick = 0f;
+
+                entity.TakeDamage(attackPower, type);
+            }
+
+            // Reset collider immediately after attack to allow next trigger detection
+            if (collider2d != null)
+            {
+                collider2d.enabled = false;
+                collider2d.enabled = true;
             }
         }
     }
