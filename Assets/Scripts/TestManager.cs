@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TestManager : MonoBehaviour
 {
@@ -24,6 +25,7 @@ public class TestManager : MonoBehaviour
             else
             {
                 Debug.Log("All levels completed!");
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             }
         }
     }
