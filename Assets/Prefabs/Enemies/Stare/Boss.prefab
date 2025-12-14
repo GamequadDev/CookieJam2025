@@ -181,14 +181,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49f21e032a5a29c4494f10dc6cb0de40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hpBar: {fileID: 0}
   type: 1
-  maxHealth: 200
-  health: 200
-  attackPower: 18
+  maxHealth: 400
+  health: 400
+  attackPower: 40
   defense: 5
   attackTick: 0.5
   currentTick: 0
+  collider2d: {fileID: 0}
+  goldReward: 1
 --- !u!50 &8457570369148449915
 Rigidbody2D:
   serializedVersion: 5
