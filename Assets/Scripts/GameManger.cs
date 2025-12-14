@@ -22,10 +22,25 @@ public class GameManger : MonoBehaviour
 
     private System.Action<Vector3Int> onTileSelected;
 
+    private int goldMultiplier = 1;
+    private float goldMultiplierTimer = 0f;
+
     void Update()
     {
+        // ... (existing update logic) ...
+        if (goldMultiplierTimer > 0)
+        {
+            goldMultiplierTimer -= Time.deltaTime;
+            if (goldMultiplierTimer <= 0)
+            {
+                goldMultiplier = 1;
+                Debug.Log("Gold multiplier expired.");
+            }
+        }
+        
         if (Input.GetKeyDown(KeyCode.R))
         {
+            // ... (existing logic) ...
             Vector3Int tilePos = GetMouseTilePosition();
             Debug.Log($"Clicked Tile Position: {tilePos}");
 
@@ -42,6 +57,7 @@ public class GameManger : MonoBehaviour
 
         if (onTileSelected != null)
         {
+             // ... (existing logic) ...
             // Update cursor position
             if (currentCursorInstance != null)
             {
@@ -99,13 +115,20 @@ public class GameManger : MonoBehaviour
 
         Vector3 mouseWorldPos = mainCamera.ScreenToWorldPoint(Input.mousePosition);
         mouseWorldPos.z = 0; 
-
+ 
         return gameTilemap.WorldToCell(mouseWorldPos);
     }
 
     public void AddCoins(int amount)
     {
-        coinCount += amount;
+        coinCount += amount * goldMultiplier;
+    }
+
+    public void ActivateGoldMultiplier(int multiplier, float duration)
+    {
+        goldMultiplier = multiplier;
+        goldMultiplierTimer = duration;
+        Debug.Log($"Gold multiplier x{multiplier} activated for {duration} seconds!");
     }
 
     public int GetCoins()

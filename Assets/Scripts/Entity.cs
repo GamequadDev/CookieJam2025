@@ -70,6 +70,8 @@ public class Entity : MonoBehaviour
         }
     }
 
+    public int goldReward = 1;
+
     void Die()
     {
         if (type == EntityType.Player)
@@ -79,6 +81,15 @@ public class Entity : MonoBehaviour
         }
         else
         {
+            if (type == EntityType.EnemyNPC)
+            {
+                GameManger gm = FindFirstObjectByType<GameManger>();
+                if (gm != null)
+                {
+                    gm.AddCoins(goldReward);
+                    Debug.Log($"Enemy died, awarded {goldReward} coins.");
+                }
+            }
             Destroy(gameObject);
         }
     }
