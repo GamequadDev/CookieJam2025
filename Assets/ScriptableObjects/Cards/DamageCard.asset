@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: DamageCard
   m_EditorClassIdentifier: 
   cardName: Damage
-  cardImage: {fileID: 0}
-  cardCost: 0
-  cardDescription: 
-  cardEffects: []
+  cardImage: {fileID: -2434395495271307187, guid: ba3e6c56ef531e64989e117a73279f04, type: 3}
+  cardCost: 1
+  cardDescription: +1 Dmg
+  cardEffects: {fileID: 11400000, guid: 3db72af6db39834d384bf8a6c163df57, type: 2}

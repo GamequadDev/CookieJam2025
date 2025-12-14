@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 using System.Collections.Generic;
 
 public class StoreUI : MonoBehaviour
@@ -12,6 +13,24 @@ public class StoreUI : MonoBehaviour
     void Start()
     {
         storeManager = FindFirstObjectByType<StoreManager>();
+
+        // Ensure the cardsContainer has a VerticalLayoutGroup to arrange cards top-to-bottom
+        if (cardsContainer != null)
+        {
+            VerticalLayoutGroup layoutGroup = cardsContainer.GetComponent<VerticalLayoutGroup>();
+            if (layoutGroup == null)
+            {
+                layoutGroup = cardsContainer.gameObject.AddComponent<VerticalLayoutGroup>();
+                
+                // Configure default settings for a vertical list
+                layoutGroup.childAlignment = TextAnchor.UpperCenter;
+                layoutGroup.childControlHeight = false; // Let cards define their own height
+                layoutGroup.childControlWidth = true;  // Stretch cards to fit container width
+                layoutGroup.childForceExpandHeight = false;
+                layoutGroup.childForceExpandWidth = true;
+                layoutGroup.spacing = 10f; // Add some spacing between cards
+            }
+        }
         
         if (storeManager != null)
         {
