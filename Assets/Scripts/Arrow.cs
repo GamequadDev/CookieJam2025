@@ -24,6 +24,10 @@ public class Arrow : MonoBehaviour
         {
             Debug.Log("Arrow hit: " + other.gameObject.name);
             entity.TakeDamage(damage, shooterType);
+            if(entity.type == Entity.EntityType.EnemyNPC || entity.type == Entity.EntityType.FriendlyNPC)
+            {
+                Destroy(gameObject);
+            }
         }
     }
 }
