@@ -19,6 +19,11 @@ public class Arrow : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        if(other.CompareTag("MapLimit"))
+        {
+            Destroy(gameObject);
+        }
+
         Entity entity = other.GetComponent<Entity>();
         if (entity != null)
         {
