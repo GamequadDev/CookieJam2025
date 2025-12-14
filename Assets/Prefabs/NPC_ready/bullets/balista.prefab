@@ -10,9 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 6825604862041209766}
   - component: {fileID: 2668087314742654352}
-  - component: {fileID: -7095182601155940683}
+  - component: {fileID: -5700272073847424882}
+  - component: {fileID: -7701313867496043759}
+  - component: {fileID: 4874020441779045942}
   m_Layer: 0
-  m_Name: arrow-test_0
+  m_Name: balista
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -88,7 +90,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-7095182601155940683
+--- !u!114 &-5700272073847424882
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -97,6 +99,59 @@ MonoBehaviour:
   m_GameObject: {fileID: 1453904129217286065}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0014f0baee66b1c499a6a5933cb274d2, type: 3}
+  m_Script: {fileID: 11500000, guid: bd94ef6bb5e8874499a9037724f36126, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  transform: {fileID: 6825604862041209766}
+  missileSpeed: 15
+--- !u!114 &-7701313867496043759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1453904129217286065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb7696d73d0e1a34faf923c101cc2b69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 20
+  shooterType: 2
+--- !u!70 &4874020441779045942
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1453904129217286065}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.09, y: 0.26}
+  m_Direction: 0
