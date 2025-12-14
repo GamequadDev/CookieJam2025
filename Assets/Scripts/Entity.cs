@@ -35,7 +35,10 @@ public class Entity : MonoBehaviour
         }
         currentTick += Time.deltaTime;
 
-        hpBar.value = (float)(health / maxHealth);
+        if (hpBar != null)
+        {
+            hpBar.value = (float)health / maxHealth;
+        }
     }
 
     public void TakeDamage(int damage, EntityType attackerType)
