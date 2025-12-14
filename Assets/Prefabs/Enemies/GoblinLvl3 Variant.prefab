@@ -12,6 +12,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: GoblinLvl3 Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 2884163323163119907, guid: 8601d17125140934fb1593865ac66a4f, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2884163323163119907, guid: 8601d17125140934fb1593865ac66a4f, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2884163323163119907, guid: 8601d17125140934fb1593865ac66a4f, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3253471957376390122, guid: 8601d17125140934fb1593865ac66a4f, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3253471957376390122, guid: 8601d17125140934fb1593865ac66a4f, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3501355088664802213, guid: 8601d17125140934fb1593865ac66a4f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.88
@@ -52,6 +72,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6634742404070853168, guid: 8601d17125140934fb1593865ac66a4f, type: 3}
+      propertyPath: hpBar
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8874008823859580998, guid: 8601d17125140934fb1593865ac66a4f, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -61,7 +85,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 1190751235122133184, guid: 8601d17125140934fb1593865ac66a4f, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8601d17125140934fb1593865ac66a4f, type: 3}
