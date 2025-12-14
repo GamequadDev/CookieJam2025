@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackUpgradeAmount: 0
   defenseUpgradeAmount: 0
-  healthAmmount: 15
+  healthAmmount: 100
   maxHealthUpgradeAmount: 0

@@ -19,11 +19,15 @@ public class Entity : MonoBehaviour
     public int defense;
     public float attackTick = 0.5f;
     public float currentTick = 0f;
+    public Collider2D collider2d;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        if(collider2d == null)
+        {
+            collider2d = GetComponent<Collider2D>();
+        }
     }
 
     // Update is called once per frame
@@ -34,6 +38,16 @@ public class Entity : MonoBehaviour
             Die();
         }
         currentTick += Time.deltaTime;
+
+        if (currentTick > attackTick)
+        {
+            // Reset trigger contacts by briefly disabling and enabling the collider
+            if (collider2d != null)
+            {
+                collider2d.enabled = false;
+                collider2d.enabled = true;
+            }
+        }
 
         if (hpBar != null)
         {
@@ -97,11 +111,14 @@ public class Entity : MonoBehaviour
         }
     }
 
+    
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (currentTick > attackTick)
         {
-            currentTick = attackTick;
+            // start cooldown
+            currentTick = 0f;
             Debug.Log("Entity hit: " + other.gameObject.name);
             Entity entity = other.GetComponent<Entity>();
             if (entity != null)

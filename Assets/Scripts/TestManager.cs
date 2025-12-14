@@ -2,21 +2,29 @@ using UnityEngine;
 
 public class TestManager : MonoBehaviour
 {
-    public WaveManager waveManager, waveManager2;
-    int currentWave;
+    public WaveManager[] levels;
+    public int currentLevel = 0;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        waveManager.StartWaves();
+        levels[0].StartWaves();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(!waveManager.IsActive())
+        if (levels[currentLevel].IsActive() == false)
         {
-            waveManager2.StartWaves();
+            currentLevel++;
+            if(currentLevel < levels.Length)
+            {
+                levels[currentLevel].StartWaves();
+            }
+            else
+            {
+                Debug.Log("All levels completed!");
+            }
         }
     }
 }

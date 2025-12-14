@@ -16,7 +16,7 @@ public class UpgradeFriendllyNPCEffect : CardEffect
         var entities = FindObjectsByType<Entity>(FindObjectsSortMode.None);
         foreach (var entity in entities)
         {
-            if (entity.type == Entity.EntityType.FriendlyNPC)
+            if (entity.type == Entity.EntityType.FriendlyNPC || entity.type == Entity.EntityType.Player)
             {
                 entity.attackPower += attackUpgradeAmount;
                 entity.defense += defenseUpgradeAmount;
