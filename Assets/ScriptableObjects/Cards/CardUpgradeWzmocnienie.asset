@@ -16,4 +16,4 @@ MonoBehaviour:
   cardImage: {fileID: 7926969445086412265, guid: cce918108d9adc546b56467e555adf12, type: 3}
   cardCost: 10
   cardDescription: "Zwi\u0119ksza maksymalne zdrowie zamku o 30"
-  cardEffects: {fileID: 0}
+  cardEffects: {fileID: 11400000, guid: 55f4eb87d1cf4c24d8557bced928385d, type: 2}

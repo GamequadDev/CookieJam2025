@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1240188f883602819a13ddacd0f0e6e, type: 3}
   m_Name: UpgradeDmg
   m_EditorClassIdentifier: 
-  attackUpgradeAmount: 2
+  attackUpgradeAmount: 5
   defenseUpgradeAmount: 0
   healthAmmount: 0
   maxHealthUpgradeAmount: 0

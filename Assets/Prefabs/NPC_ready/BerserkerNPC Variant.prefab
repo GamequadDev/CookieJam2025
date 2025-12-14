@@ -88,11 +88,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49f21e032a5a29c4494f10dc6cb0de40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hpBar: {fileID: 0}
   type: 2
-  maxHealth: 15
-  health: 15
+  maxHealth: 60
+  health: 60
   attackPower: 17
   defense: 4
+  attackTick: 0.5
+  currentTick: 0
+  goldReward: 1
 --- !u!70 &7113038934871374673
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

@@ -1,6 +1,7 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Tilemaps;
 using System.Collections.Generic;
+using TMPro;
 
 public class GameManger : MonoBehaviour
 {
@@ -13,7 +14,7 @@ public class GameManger : MonoBehaviour
 
     [SerializeField] private int coinCount = 0;
 
-
+    public TextMeshProUGUI coinText;
     void Start()
     {
         if (mainCamera == null)
@@ -80,6 +81,8 @@ public class GameManger : MonoBehaviour
                 }
             }
         }
+
+        coinText.text = "Złoto: " + coinCount.ToString();
     }
 
     public void StartTileSelection(System.Action<Vector3Int> callback)
