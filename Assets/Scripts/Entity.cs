@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Entity : MonoBehaviour
@@ -94,7 +95,7 @@ public class Entity : MonoBehaviour
         if (type == EntityType.Player)
         {
             Debug.Log("Player has died. Game Over.");
-            // Implement game over logic here
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
         else
         {
